@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+ <user>
+   <login>admin</login>
+   <name>new user</name>
+   <email>artur.drabinko@gmail.com</email>
+   <password>be35c78c5052eeddce11aeb6317ae41eba6e827e</password>
+   <salt>qwerty</salt>
+ </user>
+ <user>
+   <login>lol</login>
+   <name>new user</name>
+   <email>artur@gmail.com</email>
+   <password>18c4ffa41a30e90fba333bc28a78eab4ba6810fa</password>
+   <salt>qwerty</salt>
+ </user>
+</users>

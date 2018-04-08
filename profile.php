@@ -1,0 +1,55 @@
+<?php
+session_start();
+
+if( isset( $_GET['action'] ) ){
+  if ( $_GET["action"] == "out" ) {
+    session_destroy();
+    header( "Location: ". './' );
+  }
+  //Other action
+}
+
+if ( !isset($_COOKIE['sid']) ){
+   session_destroy();
+   header( "Location: ". './' );
+}
+
+if ( !isset($_SESSION['logged_user']) ) {
+   header( "Location: ". './' );
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Test task</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="./">Test</a>
+            </div>
+            <div class="login-logout">
+                <button id="btn_logout" class="btn">
+                   <a href="profile.php?action=out">Выйти</a>
+                </button>
+            </div>
+        </header>
+        <section class="main container">
+            <h3>Ура вы авторизовались!</h3>
+            <?php echo '<b>'.$_SESSION['logged_user']['login'].'</b> Добро пожаловать в профиль!';
+            ?>
+        </section>
+    </div>
+    <footer class="container">
+        <span>Artur Drabinko</span>
+    </footer>
+</body>
+
+</html>
