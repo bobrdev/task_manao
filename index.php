@@ -39,7 +39,7 @@ if ( isset($_SESSION['logged_user']) ) {
                     <label for="">
                         <b>Имя пользователя:</b>
                     </label>
-                    <input id="in_user_name" type="text" name="user_name" class="form-control" required>
+                    <input id="in_user_name" type="text" name="user_name" placeholder="Имя/Фамилия"  class="form-control" required>
                     <div class="invalid-feedback hide">
                         Имя уже занято!
                     </div>
@@ -49,7 +49,7 @@ if ( isset($_SESSION['logged_user']) ) {
                     <label for="">
                         <b>Логин:</b>
                     </label>
-                    <input id="in_login" type="text" name="login" class="form-control" required>
+                    <input id="in_login" type="text" name="login" placeholder="Логин" class="form-control" required>
                     <div class="invalid-feedback hide">
                         Логин уже занят!
                     </div>
@@ -59,7 +59,7 @@ if ( isset($_SESSION['logged_user']) ) {
                     <label>
                         <b>Введите E-mail:</b>
                     </label>
-                    <input id="in_email" type="email" name="email" class="form-control" placeholder="ivanov@gmail.com" maxlength="35" required>
+                    <input id="in_email" type="email" name="email" class="form-control" placeholder="Ваш E-mail" maxlength="35" required>
                     <div class="valid-feedback hide">
                         Email свободен!
                     </div>
@@ -72,7 +72,7 @@ if ( isset($_SESSION['logged_user']) ) {
                     <label for="">
                         <b>Пароль:</b>
                     </label>
-                    <input id="in_password" type="password" name="password" class="form-control" required>
+                    <input id="in_password" type="password" name="password" placeholder="Пароль"  class="form-control" required>
                     <div class="invalid-feedback hide">
                         Неверный пароль!
                     </div>
@@ -82,7 +82,7 @@ if ( isset($_SESSION['logged_user']) ) {
                     <label for="exampleInputPassword1">
                         <b>Повторите пароль:</b>
                     </label>
-                    <input id="in_confirm_password" type="password" name="confirm_password" class="form-control" required>
+                    <input id="in_confirm_password" type="password" name="confirm_password" placeholder="Повторите пароль"  class="form-control" required>
                     <div class="invalid-feedback hide">
                         Пароли не совпали либо слишко простые!
                     </div>

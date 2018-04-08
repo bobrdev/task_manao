@@ -14,4 +14,11 @@
     <password>f37ad01e0030abd13c1e676e17ee9be99c7a4fb6</password>
     <salt>IN8RlIL1pPeIQCbGambLu93K7ACZuto8E9yXjlRl</salt>
   </user>
+  <user>
+    <login>lol</login>
+    <name>lol</name>
+    <email>lol@gmail.com</email>
+    <password>8c763707e3964aad26d0da1c5390972e59402352</password>
+    <salt>OcUcbj0hgMJuAyukXhRLzgRjqLhIhYVIxFdKxLKL</salt>
+  </user>
 </users>

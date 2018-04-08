@@ -35,11 +35,15 @@ btn_header_athorization.addEventListener("click", function () {
 });
 
 const handlerRegistrationForm = function() {
+    error_box.classList.add("hide");
+
     if (inPasswordsEqual()) {
         let formData = getDataRegistrationForm();
         async_send_form(formData);
     } else {
         console.log("pass not equal");
+        error_box.innerHTML = "Пароли не совпали!";
+        error_box.classList.remove("hide");
     }
 };
 
