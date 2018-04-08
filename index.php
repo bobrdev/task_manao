@@ -4,8 +4,6 @@ session_start();
 if ( isset($_SESSION['logged_user']) ) {
    header( "Location: ". 'profile.php' );
 }
-$str = '1q2w'.'qwerty';
-echo sha1($str);
 
 ?>
 <!DOCTYPE html>
@@ -18,17 +16,6 @@ echo sha1($str);
     <link rel="stylesheet" href="css/style.css">
     <title>Test task</title>
 </head>
-<!--
-Форма регистрации:
-    1) Поля:
-     - login (unique)
-     - password
-     - confirm_password
-     - email (unique)
-     - name
-     <img id="load_data_reg" class="hide" src="img/load.gif" alt="" width="40" height="40">
-
--->
 
 <body>
     <div class="wrapper">
@@ -36,7 +23,7 @@ echo sha1($str);
             <div class="logo">
                 <a href="./">Test</a>
             </div>
-            <div class="login-logout">
+            <div class="reg-login">
                 <button id="btn_header_registration" class="btn active">Регистарация</button>
                 <button id="btn_header_athorization" class="btn">Войти</button>
             </div>
@@ -44,8 +31,9 @@ echo sha1($str);
         <section class="main container">
             <h3>Для регистрации заполните форму<br>и нажмите кнопку <b>Зарегистрироваться</b></h3>
 
-            <div id="response_message" class="response_message hide">
-            </div>
+            <div id="error_box" class="error_message hide"></div>
+            <div id="success_box" class="success_mesage hide"></div>
+
             <form method="POST" id="form_registration" action="javascript:void(null);" onsubmit="handlerRegistrationForm()">
                 <div class="form-group col-md-6 pl-0">
                     <label for="">

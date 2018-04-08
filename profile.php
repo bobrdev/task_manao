@@ -32,10 +32,7 @@ if ( !isset($_SESSION['logged_user']) ) {
 <body>
     <div class="wrapper">
         <header>
-            <div class="logo">
-                <a href="./">Test</a>
-            </div>
-            <div class="login-logout">
+            <div class="logout">
                 <button id="btn_logout" class="btn">
                    <a href="profile.php?action=out">Выйти</a>
                 </button>
@@ -43,7 +40,9 @@ if ( !isset($_SESSION['logged_user']) ) {
         </header>
         <section class="main container">
             <h3>Ура вы авторизовались!</h3>
-            <?php echo '<b>'.$_SESSION['logged_user']['login'].'</b> Добро пожаловать в профиль!';
+            <?php
+               $hello_message = '<p> Hello <b>'.$_SESSION['logged_user']['name'].'</b>!</p>';
+               echo $hello_message;
             ?>
         </section>
     </div>

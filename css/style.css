@@ -26,10 +26,6 @@ header {
     font-size: 20px;
 }
 
-.login-logout {
-
-}
-
 .container {
     width: 920px;
 }
@@ -48,7 +44,8 @@ h3 {
     text-align: center;
 }
 
-.response_message {
+.error_message,
+.success_mesage {
     display: flex;
     align-content: center;
     height: 30px;
@@ -57,6 +54,11 @@ h3 {
     border-radius: 10px;
     border: 2px solid salmon;
     background-color: coral;
+}
+
+.success_mesage {
+   border: 2px solid green;
+   background-color: green;
 }
 
 form {

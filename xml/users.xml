@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
- <user>
-   <login>admin</login>
-   <name>new user</name>
-   <email>artur.drabinko@gmail.com</email>
-   <password>be35c78c5052eeddce11aeb6317ae41eba6e827e</password>
-   <salt>qwerty</salt>
- </user>
- <user>
-   <login>lol</login>
-   <name>new user</name>
-   <email>artur@gmail.com</email>
-   <password>18c4ffa41a30e90fba333bc28a78eab4ba6810fa</password>
-   <salt>qwerty</salt>
- </user>
+  <user>
+    <login>ivan</login>
+    <name>Ivan Ivanov</name>
+    <email>ivan.ivanov@gmail.com</email>
+    <password>5c8fe7ef582996d9be69f0ffd180159ba457b7dc</password>
+    <salt>A4jDaAUl0PrTHi0jIIJL215b3xrz08iUUeNCL3Ia</salt>
+  </user>
+  <user>
+    <login>artur</login>
+    <name>Artur Drabinko</name>
+    <email>artur.drabinko@gmail.com</email>
+    <password>f37ad01e0030abd13c1e676e17ee9be99c7a4fb6</password>
+    <salt>IN8RlIL1pPeIQCbGambLu93K7ACZuto8E9yXjlRl</salt>
+  </user>
 </users>

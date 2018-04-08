@@ -7,10 +7,17 @@ const form_athorization = document.getElementById("form_athorization");
 const btn_form_registration = document.getElementById("btn_form_registration");
 const btn_form_athorization = document.getElementById("btn_form_athorization");
 
-const error_box = document.getElementById('response_message');
+const error_box = document.getElementById('error_box');
+const success_box = document.getElementById('success_box');
 
+const hideBoxMessage = function() {
+   success_box.classList.add("hide");
+   error_box.classList.add("hide");
+};
 
 btn_header_registration.addEventListener("click", function () {
+    hideBoxMessage();
+
     form_athorization.classList.add("hide");
     btn_header_athorization.classList.remove("active");
 
@@ -19,6 +26,7 @@ btn_header_registration.addEventListener("click", function () {
 });
 
 btn_header_athorization.addEventListener("click", function () {
+    hideBoxMessage();
     form_registration.classList.add("hide");
     btn_header_registration.classList.remove("active");
 
@@ -64,10 +72,10 @@ const inPasswordsEqual = function () {
 };
 
 function processing_response(data){
-   console.log(data);
+   //console.log(data);
    try {
      let response = JSON.parse(data);
-     console.log(response);
+     //console.log(response);
      handlerResponse(response);
    } catch (err) {
       console.log("ошибка сервера!");
@@ -112,11 +120,12 @@ const processingSuccesResponce = function(response){
    if( response['operation'] == 'registration' ){
       console.log("processingSuccesResponce - registration - success");
       error_box.classList.add("hide");
+      success_box.innerHTML = response['message'];
+      success_box.classList.remove("hide");
    }
 }
 
 const handlerResponse = function(response){
-   // console.log("handlerResponse");
     switch (response['status']){
         case 'success':
             processingSuccesResponce(response);
